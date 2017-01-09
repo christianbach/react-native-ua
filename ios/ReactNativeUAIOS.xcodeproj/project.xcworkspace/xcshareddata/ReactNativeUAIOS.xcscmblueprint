@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7223B3F3CFB9E17210BD07EDA586B035893377A2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7223B3F3CFB9E17210BD07EDA586B035893377A2" : 9223372036854775807,
+    "FBA201861AF02AD8C4A26D127679E56080065C69" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D0A4785C-776E-44A8-BF79-0A0294963766",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7223B3F3CFB9E17210BD07EDA586B035893377A2" : "react-native-ua\/",
+    "FBA201861AF02AD8C4A26D127679E56080065C69" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ReactNativeUAIOS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/ReactNativeUAIOS.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/christianbach\/react-native-ua.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7223B3F3CFB9E17210BD07EDA586B035893377A2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:christianbach\/core-css.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FBA201861AF02AD8C4A26D127679E56080065C69"
+    }
+  ]
+}
