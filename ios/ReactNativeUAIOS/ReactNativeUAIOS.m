@@ -53,32 +53,11 @@ static PushHandler *pushHandler = nil;
 RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(enableNotification) {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
     [UAirship push].userPushNotificationsEnabled = YES;
-
-    if ([defaults objectForKey:@"first_time_notification_enable"]) {
-
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
-
-    } else {
-
-        [defaults setBool:YES forKey:@"first_time_notification_enable"];
-        [defaults synchronize];
-
-    }
 }
 
 RCT_EXPORT_METHOD(disableNotification) {
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
-
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
-
-    } else {
-
-        [UAirship push].userPushNotificationsEnabled = NO;
-
-    }
+    [UAirship push].userPushNotificationsEnabled = NO;
 }
 
 RCT_EXPORT_METHOD(addTag:(NSString *)tag) {
@@ -111,22 +90,9 @@ RCT_EXPORT_METHOD(handleBackgroundNotification) {
 }
 
 RCT_EXPORT_METHOD(enableGeolocation) {
-    if([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined){
-        static CLLocationManager* lm = nil;
-        static dispatch_once_t once;
-
-        dispatch_once(&once, ^ {
-            // Code to run once
-            lm = [[CLLocationManager alloc] init];
-        });
-
-        [lm requestAlwaysAuthorization];
-
-        [UAirship location].locationUpdatesEnabled = YES;
-        [UAirship location].autoRequestAuthorizationEnabled = YES;
-        [UAirship location].backgroundLocationUpdatesAllowed = YES;
-
-    }
+    [UAirship location].locationUpdatesEnabled = YES;
+    [UAirship location].autoRequestAuthorizationEnabled = YES;
+    [UAirship location].backgroundLocationUpdatesAllowed = YES;
 }
 
 RCT_EXPORT_METHOD(enableActionUrl) {
