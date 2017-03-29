@@ -76,7 +76,7 @@ public class ReactNativeUA extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void areNotificationsEnabled(Callback callback) {
-        Boolean enabled = NotificationManagerCompat.from(getReactApplicationContext()).areNotificationsEnabled()
+        Boolean enabled = NotificationManagerCompat.from(getReactApplicationContext()).areNotificationsEnabled();
         callback.invoke(enabled);
     }
 
