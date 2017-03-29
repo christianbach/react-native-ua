@@ -73,11 +73,11 @@ public class ReactNativeUA extends ReactContextBaseJavaModule {
       UAirship.shared().getPushManager().setQuietTimeEnabled(enabled);
     }
 
-/*    @ReactMethod
+    @ReactMethod
     public void areNotificationsEnabled(Callback callback) {
-        Boolean enabled = NotificationManagerCompat.areNotificationsEnabled();
+        Boolean enabled = UAirship.shared().getPushManager().isOptIn();
         callback.invoke(enabled);
-    }*/
+    }
 
     @ReactMethod
     public void setNamedUserId(String namedUserID) {
