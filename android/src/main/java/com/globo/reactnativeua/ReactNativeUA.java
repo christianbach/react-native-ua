@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -75,7 +76,7 @@ public class ReactNativeUA extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void areNotificationsEnabled(Callback callback) {
-        Boolean enabled = UAirship.shared().getPushManager().isOptIn();
+        Boolean enabled = NotificationManagerCompat.from(getReactApplicationContext()).areNotificationsEnabled()
         callback.invoke(enabled);
     }
 
