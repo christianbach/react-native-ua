@@ -115,9 +115,6 @@ class ReactNativeUA {
       bridge.setQuietTimeEnabled(enabled);
     }
 
-    /*
-        iOS only.
-    */
     static are_notifications_enabled (callback) {
         return new Promise((resolve, reject) => {
             bridge.areNotificationsEnabled(enabled => {
