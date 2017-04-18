@@ -125,6 +125,12 @@ RCT_EXPORT_METHOD(setQuietTimeEnabled:(nonnull NSNumber *)enabled) {
 
 RCT_EXPORT_METHOD(areNotificationsEnabled:(RCTResponseSenderBlock)callback)
 {
+    BOOL enabled = [UAirship push].authorizedNotificationOptions != 0;
+    callback(@[ @(enabled) ]);
+}
+
+RCT_EXPORT_METHOD(areNativeNotificationsEnabled:(RCTResponseSenderBlock)callback)
+{
     UIUserNotificationSettings *grantedSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
     BOOL enabled = grantedSettings.types != UIUserNotificationTypeNone;
     callback(@[ @(enabled) ]);

@@ -124,6 +124,15 @@ class ReactNativeUA {
         })
     }
 
+    static are_native_notifications_enabled (callback) {
+        return new Promise((resolve, reject) => {
+            bridge.areNativeNotificationsEnabled(enabled => {
+                callback && callback(null, enabled);
+                resolve(enabled);
+            })
+        })
+    }
+
     static set_named_user_id (nameUserId) {
         bridge.setNamedUserId(nameUserId);
     }
