@@ -136,6 +136,11 @@ RCT_EXPORT_METHOD(areNativeNotificationsEnabled:(RCTResponseSenderBlock)callback
     callback(@[ @(enabled) ]);
 }
 
+RCT_EXPORT_METHOD(getChannelId:(RCTResponseSenderBlock)callback) {
+    NSString *channelID = [UAirship push].channelID;
+    callback(@[ channelID ]);
+}
+
 @end
 
 
